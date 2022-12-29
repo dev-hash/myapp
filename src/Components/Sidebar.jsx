@@ -7,7 +7,7 @@ import {
   FaRegWindowRestore,
 } from "react-icons/fa";
 import { HiBadgeCheck } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,26 +15,26 @@ const Sidebar = ({ children }) => {
   const menuItem = [
     {
       path: "/dashboard",
-      name: "Dashboard",
+      name: "Sidebar",
       icon: <FaTh />,
     },
     {
-      path: "/categories",
+      path: "/dashboard/categories",
       name: "Categories",
       icon: <FaRegWindowRestore />,
     },
     {
-      path: "/config",
+      path: "/dashboard/config",
       name: "IMAPConfig",
       icon: <FaRegChartBar />,
     },
     {
-      path: "/users",
+      path: "/dashboard/users",
       name: "Users",
       icon: <FaUsers />,
     },
     {
-      path: "/subscription-plan",
+      path: "/dashboard/subscription-plan",
       name: "SubscriptionPlan",
       icon: <HiBadgeCheck />,
     },
@@ -52,7 +52,7 @@ const Sidebar = ({ children }) => {
           </div>
         </div>
         {menuItem.map((item, index) => (
-          <NavLink
+          <Link
             to={item.path}
             key={index}
             className="link"
@@ -65,7 +65,7 @@ const Sidebar = ({ children }) => {
             >
               {item.name}
             </div>
-          </NavLink>
+          </Link>
         ))}
       </div>
       <main>{children}</main>

@@ -1,10 +1,11 @@
 import React from "react";
+import Sidebar from "../Components/Sidebar";
 
 
  const SubscriptionPlan=()=>{
     return (
         <>
-       
+        {/* <Sidebar/> */}
           <div className="alignbutton flex justify-end">
             <button className="bg-blue-500 hover:bg-blue-700 justify-items-end text-white font-bold py-2 px-4 border border-blue-700 rounded">
               Add Plan
