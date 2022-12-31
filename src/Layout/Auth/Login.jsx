@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 
  const Login=()=>{
     return(
@@ -37,31 +37,35 @@ import { Link } from "react-router-dom";
                         />
                     </div>
                     <a
-                        href="reset-password"
+                        href=""
                         className="text-xs text-purple-600 hover:underline"
                     >
-                        Forget Password?
+                        <Link to="/reset-password">Forget Password?</Link>
                     </a>
-                    <Link to="dashboard" className="mt-6">
+                    <div className="mt-6">
+                    <Link to="/dashboard" >
                         <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
                             Login
                         </button>
                     </Link>
+                    </div>
                 </form>
 
                 <p className="mt-8 text-xs font-light text-center text-gray-700">
                     {" "}
                     Don't have an account?{" "}
                     <a
-                        href="/dashboard"
+                        href=""
                         className="font-medium text-purple-600 hover:underline"
                     >
-                        Sign up
+                       <Link to="/signup"> Signup</Link>
                     </a>
                 </p>
+                <Outlet/>
             </div>
+           
         </div>
-   
+       
         </>
     )
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import Sidebar from "../Components/Sidebar";
+import '../Styles/mystyles.css'
 
 const Categories = () => {
   return (
-    <>
+    <div style={{ width: "100%" }}>
       {/* <Sidebar/> */}
-      <div className="mymargin">
-        <div className="alignbutton flex justify-end">
+      <div>
+        <div className=" flex justify-end btnmargin">
           <button className="bg-blue-500 hover:bg-blue-700 justify-items-end text-white font-bold py-2 px-4 border border-blue-700 rounded">
             Add Categories
           </button>
@@ -14,7 +15,7 @@ const Categories = () => {
         <div className="flex flex-col tablemargin ">
           <div className="overflow-x-auto ">
             <div className="p-1.5 w-full inline-block align-middle flex justify-center ">
-              <div className="overflow-hidden border rounded-lg w-10/12  ">
+              <div className="overflow-hidden border rounded-lg  w-10/12">
                 <table className="min-w-full divide-y divide-gray-200 border-separate border border-slate-400 ">
                   <thead className="bg-green-50">
                     <tr>
@@ -255,7 +256,7 @@ const Categories = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

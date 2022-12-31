@@ -3,9 +3,9 @@ import "./App.css";
 import Login from "./Layout/Auth/Login";
 import SignUp from "./Layout/Auth/SignUp";
 import ResetPassword from "./Layout/Auth/ResetPassword";
-// import SignIn from "./Layout/Users/SignIn";
-// import Signup from "./Layout/Users/Signup";
-// import Resetpassword from "./Layout/Users/Resetpassword";
+import SignIn from "./Layout/Users/SignIn";
+import Signup from "./Layout/Users/Signup";
+import Resetpassword from "./Layout/Users/Resetpassword";
 // import Sidebar from "./Components/Sidebar";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -23,26 +23,30 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/dashboard" element={<Sidebar />}>
-            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/dashboard/categories" element={<Categories />} />
             <Route path="/dashboard/config" element={<IMAPConfig />} />
             <Route path="/dashboard/users" element={<Users />} />
-            <Route path="/dashboard/subscription-plan" element={<SubscriptionPlan />}/>
+            <Route
+              path="/dashboard/subscription-plan"
+              element={<SubscriptionPlan />}
+            />
           </Route>
+
+          <Route path="/admin" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route path="reset-password" element={<ResetPassword />} />
+
+          <Route path="/" element={<SignIn />} />
+          <Route path="/usignup" element={<Signup />} />
+          <Route path="/ureset-password" element={<Resetpassword />} />
         </Routes>
       </BrowserRouter>
       {/* <div>
       <Main></Main>
      </div> */}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Login />}></Route>
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
-        </Routes>
-      </BrowserRouter>
 
-      <Main />
+      {/* <Main /> */}
     </>
   );
 }

@@ -7,7 +7,8 @@ import {
   FaRegWindowRestore,
 } from "react-icons/fa";
 import { HiBadgeCheck } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
+import Dashboard from "../Pages/Dashboard";
 
 const Sidebar = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +16,7 @@ const Sidebar = ({ children }) => {
   const menuItem = [
     {
       path: "/dashboard",
-      name: "Sidebar",
+      name: "Dashboard",
       icon: <FaTh />,
     },
     {
@@ -42,6 +43,7 @@ const Sidebar = ({ children }) => {
   return (
     
     <div className="container">
+
       <div style={{ width: isOpen ? "200px" : "50px" }} className="sidebar">
         <div className="top_section">
           <h1 style={{ display: isOpen ? "block" : "none" }} className="logo">
@@ -68,8 +70,11 @@ const Sidebar = ({ children }) => {
           </Link>
         ))}
       </div>
-      <main>{children}</main>
+      {/* <main>{children}</main> */}
+      <Outlet />
+        
     </div>
+    
   );
 };
 

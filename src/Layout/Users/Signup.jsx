@@ -72,7 +72,7 @@ import React from "react";
                     {" "}
                     Already have an account?{" "}
                     <a
-                        href="/signin"
+                        href="/"
                         className="font-medium text-purple-600 hover:underline"
                     >
                         Sign in

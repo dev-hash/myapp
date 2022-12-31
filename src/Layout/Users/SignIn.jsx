@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
  const SignIn=()=>{
     return(
@@ -36,15 +37,17 @@ import React from "react";
                         />
                     </div>
                     <a
-                        href="reset-password"
+                        href=""
                         className="text-xs text-purple-600 hover:underline"
                     >
-                        Forget Password?
+                        <Link to="/ureset-password">Forget Password?</Link>
                     </a>
                     <div className="mt-6">
+                    <Link to="/dashboard">
                         <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-purple-700 rounded-md hover:bg-purple-600 focus:outline-none focus:bg-purple-600">
-                            Login
+                            SignIn
                         </button>
+                        </Link>
                     </div>
                 </form>
 
@@ -52,10 +55,10 @@ import React from "react";
                     {" "}
                     Don't have an account?{" "}
                     <a
-                        href="#"
+                        href=""
                         className="font-medium text-purple-600 hover:underline"
                     >
-                        Sign up
+                       <Link to="/usignup">SignUp</Link>
                     </a>
                 </p>
             </div>

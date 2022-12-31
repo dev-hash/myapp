@@ -6,7 +6,7 @@ import React from "react";
       <section className="bg-gray-50 dark:bg-gray-900 ">
         <div className="flex flex-col items-center justify-center  px-6 py-8 mx-auto md:h-screen lg:py-0">
           
-          <div className="w-full p-6 bg-white rounded-lg shadow-md  shadow-xl shadow-rose-600/40 shadow dark:border md:mt-0 sm:max-w-md dark:bg-gray-800 dark:border-gray-700 sm:p-8">
+          <div className="w-full p-6 m-auto bg-white rounded-md shadow-md text-center shadow-xl shadow-rose-600/40 lg:max-w-xl w-4/12 ">
             <h2 className="mb-1 text-xl text-center font-bold leading-tight tracking-tight text-purple-900 md:text-2xl text-purple-700 underline">
               Change Password
             </h2>

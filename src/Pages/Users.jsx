@@ -2,11 +2,11 @@ import React from "react";
 
 const Users = () => {
   return (
-    <>
+    <div style={{width:"100%"}}>
       <div className="flex flex-col ">
         <div className="overflow-x-auto ">
           <div className="p-1.5 w-full inline-block align-middle flex justify-center ">
-            <div className="overflow-hidden border rounded-lg w-10/12  ">
+            <div className="overflow-hidden border rounded-lg w-10/12  " style={{marginTop:"40px"}}>
               <table className="min-w-full divide-y divide-gray-200 border-separate border border-slate-400 ">
                 <thead className="bg-green-50">
                   <tr>
@@ -251,7 +251,8 @@ const Users = () => {
           </div>
         </div>
       </div>
-    </>
+      </div>
+  
   );
 };
 

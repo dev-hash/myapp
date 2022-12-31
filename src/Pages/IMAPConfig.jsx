@@ -5,8 +5,9 @@ import Sidebar from "../Components/Sidebar";
 const IMAPConfig=()=>{
     return (
         <>
+        <div style={{width:"100%"}}>
           {/* <Sidebar/> */}
-          <div className="alignbutton flex justify-end">
+          <div className=" flex justify-end btnmargin">
             <button className="bg-blue-500 hover:bg-blue-700 justify-items-end text-white font-bold py-2 px-4 border border-blue-700 rounded">
               Add IMAP
             </button>
@@ -253,6 +254,7 @@ const IMAPConfig=()=>{
                 </div>
               </div>
             </div>
+          </div>
           </div>
         </>
       );

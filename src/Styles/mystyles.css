@@ -1,0 +1,19 @@
+.btnmargin{
+    margin-top: 20px;
+    margin-right: 120px;
+}
+.tablemargin{
+    margin-top: 20px;
+}
+
+.inputset{
+   display: flex;
+   width: 100%;
+   margin-left: 2.5%;
+   margin-top:20px;
+}
+
+.Table-margin{
+    margin:40px;
+    
+}
