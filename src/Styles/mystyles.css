@@ -4,16 +4,17 @@
 }
 .tablemargin{
     margin-top: 20px;
+
 }
 
 .inputset{
    display: flex;
    width: 100%;
-   margin-left: 2.5%;
+   margin-left: 2.7%;
    margin-top:20px;
 }
 
 .Table-margin{
     margin:40px;
-    
+    width: 96%;
 }

@@ -1,0 +1,2 @@
+export const BASEURLSUPERADMIN= (window.location.hostname!=='localhost') ? `${window.location.protocol}//${window.location.hostname}/api/v1/superAdmin` : 'https://d1f2436rlr5wix.cloudfront.net/api/v1/superAdmin';
+export const BASEURL= (window.location.hostname!=='localhost') ? `${window.location.protocol}//${window.location.hostname}/api/v1/users` : 'https://d1f2436rlr5wix.cloudfront.net/api/v1/users';

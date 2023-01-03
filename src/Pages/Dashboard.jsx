@@ -1,5 +1,5 @@
 import React from "react";
-import Sidebar from "../Components/Sidebar";
+// import Sidebar from "../Components/Sidebar";
 import "../Styles/mystyles.css";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
