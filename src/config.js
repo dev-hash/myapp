@@ -1,2 +1,2 @@
-export const BASEURLSUPERADMIN= (window.location.hostname!=='localhost') ? `${window.location.protocol}//${window.location.hostname}/api/v1/superAdmin` : 'https://d1f2436rlr5wix.cloudfront.net/api/v1/superAdmin';
-export const BASEURL= (window.location.hostname!=='localhost') ? `${window.location.protocol}//${window.location.hostname}/api/v1/users` : 'https://d1f2436rlr5wix.cloudfront.net/api/v1/users';
+export const BASEURLSUPERADMIN="https://a66b-2401-4900-1c18-78aa-d10c-aaab-7d4c-1088.in.ngrok.io/api/v1/superAdmin/";
+export const BASEURL='https://a66b-2401-4900-1c18-78aa-d10c-aaab-7d4c-1088.in.ngrok.io/api/v1/users/';

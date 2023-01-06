@@ -1,13 +1,14 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet} from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+import { useDispatch, useSelector } from "react-redux";
+import { LoginActionHandler } from "../../Redux/Actions/SuperAdminLogin";
 const Login = () => {
-  const { handleSubmit } = useForm({
-    mode: "onChange",
-  });
+
+  const dispatch = useDispatch()
+  const {register, handleSubmit } = useForm();
   const onSubmit = (data) => {
-  console.log(data);
+  dispatch(LoginActionHandler(data))
   }
   return (
     <>
@@ -25,6 +26,7 @@ const Login = () => {
                 Email
               </label>
               <input
+              {...register('email')}
                 type="email"
                 placeholder="name@company.com"
                 className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"
@@ -38,6 +40,7 @@ const Login = () => {
                 Password
               </label>
               <input
+              {...register('password')}
                 type="password"
                 placeholder="••••••••"
                 className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-purple-400 focus:ring-purple-300 focus:outline-none focus:ring focus:ring-opacity-40"

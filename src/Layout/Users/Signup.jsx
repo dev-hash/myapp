@@ -1,6 +1,17 @@
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { UserSignupActionHandler } from "../../Redux/Actions/UserSignup";
 
  const Signup=()=>{
+    let dispatch=useDispatch()
+    const {register, handleSubmit } = useForm({
+        mode:onchange,
+    });
+    const onSubmit = (data) => {
+        dispatch(UserSignupActionHandler(data))
+        }
+
     return (
        <>
        <div className="relative flex flex-col justify-center min-h-screen overflow-hidden">
@@ -8,33 +19,22 @@ import React from "react";
                 <h1 className="text-3xl font-semibold text-center text-purple-600 underline uppercase ">
                     Sign UP
                 </h1>
-                <form className="mt-6">
+                <form className="mt-6" onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-2">
                         <label
                             htmlFor="email"
                             className="block text-sm font-semibold text-gray-800 text-left"
                         >
-                            Firstname
+                           Name
                         </label>
                         <input
-                            type="email"
+                             {...register('name')}
+                            type="text"
                             placeholder="divine"
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
-                    <div className="mb-2">
-                        <label
-                            htmlFor="email"
-                            className="block text-sm font-semibold text-gray-800 text-left"
-                        >
-                            Lastname
-                        </label>
-                        <input
-                            type="email"
-                            placeholder="brooks"
-                            className="block w-full px-4 py-2 mt-2 text-purple-600 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                        />
-                    </div>
+                    
                     <div className="mb-2">
                         <label
                             htmlFor="email"
@@ -43,6 +43,7 @@ import React from "react";
                             Email
                         </label>
                         <input
+                          {...register('email')}
                             type="email"
                             placeholder="name@company.com"
                             className="block w-full px-4 py-2 mt-2 text-purple-700 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
@@ -56,9 +57,39 @@ import React from "react";
                             Password
                         </label>
                         <input
+                          {...register('password')}
                             type="password"
                             placeholder="••••••••"
                             className="block w-full px-4 py-2 mt-2 text-indigo-700 bg-white border rounded-md focus:border-purple-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+                    <div className="mb-2">
+                        <label
+                            htmlFor="email"
+                            className="block text-sm font-semibold text-gray-800 text-left"
+                        >
+                         Mobile No.
+                        </label>
+                        <input
+                          {...register('number')}
+                            type="text"
+                            placeholder="1234567890"
+                            className="block w-full px-4 py-2 mt-2 text-purple-600 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                        />
+                    </div>
+
+                    <div className="mb-2">
+                        <label
+                            htmlFor="email"
+                            className="block text-sm font-semibold text-gray-800 text-left"
+                        >
+                            Profile
+                        </label>
+                        <input
+                          {...register('image')}
+                            type="text"
+                            placeholder="image.jpg"
+                            className="block w-full px-4 py-2 mt-2 text-purple-600 bg-white border rounded-md focus:border-indigo-400 focus:ring-indigo-300 focus:outline-none focus:ring focus:ring-opacity-40"
                         />
                     </div>
                     <div className="mt-6">

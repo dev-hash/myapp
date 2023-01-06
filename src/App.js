@@ -42,11 +42,7 @@ function App() {
           <Route path="/ureset-password" element={<Resetpassword />} />
         </Routes>
       </BrowserRouter>
-      {/* <div>
-      <Main></Main>
-     </div> */}
-
-      {/* <Main /> */}
+      
     </>
   );
 }
